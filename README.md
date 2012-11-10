@@ -1,4 +1,4 @@
 # OpenCounter Lex
-* Lexington's OpenCounter implementation *
+*Lexington's OpenCounter implementation*
 
 
