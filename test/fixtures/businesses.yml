@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  businessname: MyString
+  email: MyString
+  phone: MyString
+  ownership: MyString
+  businessindustry: MyString
+  legalstructure: MyString
+  commercial_space: false
+  owning_space: false
+  rennovations: false
+  owner: 
+
+two:
+  businessname: MyString
+  email: MyString
+  phone: MyString
+  ownership: MyString
+  businessindustry: MyString
+  legalstructure: MyString
+  commercial_space: false
+  owning_space: false
+  rennovations: false
+  owner: 

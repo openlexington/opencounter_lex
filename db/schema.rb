@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121110173826) do
+ActiveRecord::Schema.define(:version => 20121111061639) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -45,5 +45,43 @@ ActiveRecord::Schema.define(:version => 20121110173826) do
 
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
+
+  create_table "business_industries", :force => true do |t|
+    t.string   "name"
+    t.integer  "business_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "business_industries", ["business_id"], :name => "index_business_industries_on_business_id"
+
+  create_table "businesses", :force => true do |t|
+    t.string   "businessname"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "ownership"
+    t.string   "businessindustry"
+    t.string   "legalstructure"
+    t.boolean  "commercial_space"
+    t.boolean  "owning_space"
+    t.boolean  "rennovations"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  create_table "owners", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.integer  "business_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 end
